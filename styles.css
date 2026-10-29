@@ -1,0 +1,28 @@
+:root { --bg:#0f100f; --fg:#e8e6e3; --muted:#8a8680; --accent:#7ec8a3; --bar:#1a1b1a; --tag:#2a3a2f; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.45 Figtree,system-ui,sans-serif; }
+main { max-width:880px; margin:0 auto; padding:24px 16px 120px; }
+.eyebrow { color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase; margin:18px 0 6px; }
+h1 { font-size:32px; margin:0 0 8px; font-weight:600; }
+.lead { color:#c9c6c1; max-width:62ch; }
+.status { color:var(--accent); min-height:1.4em; }
+.controls { display:flex; gap:12px; flex-wrap:wrap; margin:12px 0; }
+.controls label { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--muted); }
+input, select { background:#1a1b1a; color:var(--fg); border:1px solid #333; border-radius:6px; padding:6px 8px; }
+.row { display:flex; flex-wrap:wrap; gap:8px; }
+.card { background:#1a1b1a; border:1px solid #2a2b2a; border-radius:8px; padding:8px 10px; text-align:left; color:var(--fg); cursor:pointer; min-width:140px; }
+.card.on { border-color:var(--accent); background:#1e2a24; }
+.card b { display:block; }
+.card span { color:var(--muted); font-size:12px; }
+.bars { display:grid; grid-template-columns:repeat(12,1fr); gap:4px; margin:8px 0 16px; }
+.bar { background:var(--bar); border-radius:4px; padding:6px 4px; text-align:center; font-size:11px; }
+.bar.tag { background:var(--tag); }
+.bar.active { outline:2px solid var(--accent); }
+.n { color:var(--muted); }
+pre { background:#141514; padding:12px; border-radius:8px; white-space:pre-wrap; font:12px/1.4 IBM Plex Mono,monospace; }
+.exports { display:flex; gap:8px; margin:12px 0; }
+.dock { position:fixed; bottom:0; left:0; right:0; background:#121312; border-top:1px solid #2a2b2a; display:flex; gap:8px; padding:10px 16px; justify-content:center; flex-wrap:wrap; }
+button { background:#2a3a2f; color:var(--fg); border:0; border-radius:6px; padding:8px 14px; cursor:pointer; font:inherit; }
+button.ghost { background:transparent; border:1px solid #333; }
+button:disabled { opacity:.4; cursor:not-allowed; }
+@media (max-width:600px) { .bars { grid-template-columns:repeat(6,1fr); } }
